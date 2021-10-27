@@ -20,39 +20,11 @@
             </releases>
         </pluginRepository>
     </pluginRepositories>
-    <properties>
-            <main.basedir>${project.basedir}</main.basedir>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>2.5</version>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <overwrite>true</overwrite>
-                            <encoding>UTF-8</encoding>
-                             <echo message="basedir parent : ${basedir}"/>
-                            <outputDirectory>${basedir}/target/apiproxy</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>apiproxy</directory>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>io.apigee.build-tools.enterprise4g</groupId>
